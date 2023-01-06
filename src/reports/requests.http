@@ -3,11 +3,25 @@ POST http://localhost:3000/reports
 content-type: application/json
 
 {
-    "make": "toyota2",
-    "model": "corolla",
-    "year": 1994,
+    "make": "camaro",
+    "model": "z28",
+    "year": 1978,
     "mileage": 80000,
     "lng": 0,
     "lat": 0,
-    "price": 88000
+    "price": 44444
 }
+
+### Change approval a report
+PATCH http://localhost:3000/reports/6
+content-type: application/json
+
+{
+    "approved": true
+}
+
+### Get a single report
+Get http://localhost:3000/reports/6
+
+### Get a Estimates
+Get http://localhost:3000/reports?make=camaro&model=z28&year=1978&mileage=80000&lat=0&lng=0
